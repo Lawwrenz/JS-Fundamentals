@@ -1,8 +1,14 @@
 const x = parseInt(process.argv[2]);
-const valid = !isNaN(x) && x >= 0;
+let output = 'Missing number of occurrences';
+let count = 0;
 
-// Using a for loop without space after 'for'
-let i=0;for(;i<(valid?x:1);i++) {
-  console.log(valid ? 'C is fun' : 'Missing number of occurrences');
-  if(!valid) break;
+if (!isNaN(x) && x > 0) {
+  output = 'C is fun';
+  count = x;
+}
+
+let i = 0;
+while (i < count || (i === 0 && output === 'Missing number of occurrences')) {
+  console.log(output);
+  i++;
 }
