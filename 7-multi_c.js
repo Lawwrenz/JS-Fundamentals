@@ -1,10 +1,8 @@
 const x = parseInt(process.argv[2]);
 const valid = !isNaN(x) && x >= 0;
 
-// Using a while loop with unconventional formatting
-let i = 0;
-while(i < (valid ? x : 1)) {
+// Using a for loop without space after 'for'
+let i=0;for(;i<(valid?x:1);i++) {
   console.log(valid ? 'C is fun' : 'Missing number of occurrences');
-  i++;
-  if (!valid) break;
+  if(!valid) break;
 }
